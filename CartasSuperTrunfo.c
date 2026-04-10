@@ -16,7 +16,7 @@ int main() {
 
   //Estado - carta 1 
   printf("Digite uma letra entre 'A' e 'H' para representar a inicial de um estado da carta 1: \n");
-  scanf("%c", &estado1);
+  scanf(" %c", &estado1);
 
   //Código - carta 1
   printf("Digite o código da carta 1: \n");
@@ -45,8 +45,8 @@ int main() {
   //DADOS DA CARTA 2
 
   //Estado - carta 2 
-  printf("Digite uma letra entre 'A' e 'H' para representar a inicial de um estado da carta 2: \n");
-  scanf("%c", &estado2);
+  printf("Agora.. Vamos preencher os dados da (CARTA 2)\n Digite uma letra entre 'A' e 'H' para representar a inicial de um estado da carta 2: \n");
+  scanf(" %c", &estado2);
 
   //Código - carta 2
   printf("Digite o código da carta 2: \n");
@@ -76,10 +76,10 @@ int main() {
   // Área para exibição dos dados da cidade
   printf("CARTA 1:\n");
   printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\n", estado1, codigo1, cidade1);
-  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao1, area1, pontosT1);
+  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n\n", populacao1, area1, pib1, pontosT1);
   printf("CARTA 2:\n");
   printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\n", estado2, codigo2, cidade2);
-  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao2, area2, pontosT2);
+  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao2, area2, pib2, pontosT2);
 
 
 return 0;
