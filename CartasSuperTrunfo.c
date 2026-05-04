@@ -7,8 +7,9 @@
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   char estado1, codigo1[4], cidade1[20], estado2, codigo2[4], cidade2[20];
-  int populacao1, pontosT1, populacao2, pontosT2;
+  int pontosT1, pontosT2;
   float area1, pib1, area2, pib2, densip1, percapital1, densip2, percapital2; 
+  unsigned long int populacao1, populacao2;
 
   // Área para entrada de dados
 
@@ -28,14 +29,14 @@ int main() {
 
   //Habitantes - carta 1
   printf("Digite o número de habitantes da cidade da carta 1: \n");
-  scanf("%d", &populacao1);
+  scanf("%lu", &populacao1);
 
   //KM² - carta 1
   printf("Digite a área da cidade em quilômetro quadrados da carta 1: \n");
   scanf("%f", &area1);
 
   //PIB - carta 1
-  printf("Digite o PIB (o produtro interno bruto da cidade) da carta 1: \n");
+  printf("Digite o PIB (o produto interno bruto da cidade) da carta 1: \n");
   scanf("%f", &pib1);
 
   //PONTOS TURÍSTICOS - carta 1
@@ -58,14 +59,14 @@ int main() {
 
   //Habitantes - carta 2
   printf("Digite o número de habitantes da cidade da carta 2: \n");
-  scanf("%d", &populacao2);
+  scanf("%lu", &populacao2);
 
   //KM² - carta 2
   printf("Digite a área da cidade em quilômetro quadrados da carta 2: \n");
   scanf("%f", &area2);
 
   //PIB - carta 2
-  printf("Digite o PIB (o produtro interno bruto da cidade) da carta 2: \n");
+  printf("Digite o PIB (o produto interno bruto da cidade) da carta 2: \n");
   scanf("%f", &pib2);
 
   //PONTOS TURÍSTICOS - carta 2
@@ -74,24 +75,27 @@ int main() {
 
 
   //CONTA DA DENSIDADE POPULACIONAL
-  densip1 = populacao1 / area1;
-  densip2 = populacao2 / area2;
+  densip1 = (float) populacao1 / area1;
+  densip2 = (float) populacao2 / area2;
 
   //CONTA PIB PER CAPITAL
   percapital1 = pib1 / populacao1;
   percapital2 = pib2 / populacao2;
 
+  //SOMA DE PONTO DAS CARTAS 
+
+
 
   // Área para exibição dos dados da cidade
   printf("CARTA 1:\n");
   printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\n", estado1, codigo1, cidade1);
-  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao1, area1, pib1, pontosT1);
+  printf("População: %lu\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao1, area1, pib1, pontosT1);
   printf("Densidade Populacional: %f\nPIB per Capita: %f\n\n", densip1, percapital1);
   printf("CARTA 2:\n");
   printf("Estado: %c\nCódigo: %s\nNome da Cidade: %s\n", estado2, codigo2, cidade2);
-  printf("População: %d\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao2, area2, pib2, pontosT2);
+  printf("População: %lu\nÁrea: %f\nPIB: %f\nNúmero de Pontos Turísticos: %d\n", populacao2, area2, pib2, pontosT2);
   printf("Densidade Populacional: %f\nPIB per Capita: %f\n", densip2, percapital2);
 
 
 return 0;
-} 
+}  
